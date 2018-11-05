@@ -1,0 +1,28 @@
+$(document).ready(function() {
+
+console.log("listo");
+
+/*identifico la imagen con el lineal*/
+$(".step1").find("img").addClass("lineal");
+/*Oculto el img con el lineal*/
+$(".step1").find(".lineal").hide();
+/*Añado la imagen con el play*/
+$(".step1").find("img").parent().append("<img class='play' src='https://www.canalsondeo.es/shared/images/innovacion/play-screen.png'>");
+
+
+/*on click play la desaparezco y aparezco lineal por unos segundos, luego muestro la imagen de siguiente*/ 
+$(".play").on("click", function() {
+/*scroll*/
+$('html,body').animate({
+scrollTop:$('.question').offset().top
+}, 'slow');
+/*fadeout play*/
+$(".play").fadeOut(400);
+/*fadein fadeout lineal*/
+$(".lineal").fadeIn(400);
+$(".lineal").delay(2400).fadeOut(400);
+$(".step1").find("img").parent().delay(2400).css( {"background-image":"url('https://www.canalsondeo.es/shared/images/innovacion/siguiente.png')","height":"660px"} );
+});
+
+/*end ready*/
+});
