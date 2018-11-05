@@ -1,0 +1,33 @@
+/*INCLUDE DEPENDENCY*/
+
+$(document).ready(function(){
+
+/*FONTS*/
+link=document.createElement('link');
+link.href='https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i';
+link.rel='stylesheet';
+
+/*STYLES*/
+link=document.createElement('link');
+link.href='http://www.canalsondeo.net/satispoint/_test/css/style.css';
+link.rel='stylesheet';
+/*document.head.appendChild(link);*/
+
+/*JS*/
+script=document.createElement('script');
+script.src = 'http://www.canalsondeo.net/satispoint/_test/js/snippets.js';
+document.head.appendChild(script);
+
+
+
+
+
+document.getElementsByTagName('head')[0].appendChild(link);
+
+$('body').attr('id', 'test_satis');
+
+$(".help").appendTo("div.stepQuestion");
+
+$(".marginP").prepend("<img src='http://www.canalsondeo.net/satispoint/_test/images/icon_email.png'>");
+
+});
