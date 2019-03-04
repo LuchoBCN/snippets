@@ -36,9 +36,9 @@ var id = $(".step"+i).attr("id");
 console.log(numDos);
 console.log(check);
     //IF CONDICIÓN - REORDENA - HIDE
-    if (check.includes(numDos)) {
+    if (check.indexOf(numDos)!=-1) {
         //Está en el array. Aquí debería hacer un loop hasta encontrar un número
-        while (check.includes(numDos)) {
+        while (check.indexOf(numDos)!=-1) {
             numDos = getRandomIntInclusive(2,cantPreguntas);
         }
         $(".step"+i).css({"order":"" + numDos});
@@ -69,17 +69,24 @@ $(".steps table td").on('click', function() {
     item++
     $("[orden="+item+"]").css({"display":"block","opacity":"1"});
     /*$("[orden="+item+"]").removeClass("hide");*/
-    /*$('html,body').animate({
+    $('html,body').animate({
     scrollTop:$("[orden="+item+"]").offset().top
-    }, '800');*/
+    }, '800');
 });
 
 //CAMBIO DE COLORES
-$(".step2").find("p:first-child").css({"background-color":"white","color":"#3399ff","font-style":"italic"});
-$(".step3").find("p:first-child").css({"background-color":"white","color":"#3399ff","font-style":"italic"});
-$(".step4").find("p:first-child").css({"background-color":"white","color":"#3399ff","font-style":"italic"});
-$(".step5").find("p:first-child").css({"background-color":"white","color":"#3399ff","font-style":"italic"});
-
+$(".step2").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
+$(".step3").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
+$(".step4").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
+$(".step5").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
+$(".step6").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
+$(".step7").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
+$(".step8").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
+$(".step9").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
+$(".step10").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
+$(".step11").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
+$(".step12").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
+$(".step13").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
 
 
 });//END DOCUMENT READY
