@@ -1,1 +1,0 @@
-Note one: Los pisos deben estar cubiertos por un tag <article>
