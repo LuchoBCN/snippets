@@ -63,16 +63,23 @@ for ( i=2; i<=cantPreguntas; i++) {
 /*SHOW LOS ITEM EN ORDEN*/
 var item = 1;
 $("[orden=1]").removeClass("hide");
+$("[orden=1]").addClass("foco");
 $("[orden=1]").css({"opacity":"1","display":"block"});
 /*CLICK LISTENER*/
 $(".steps table td").on('click', function() {
+/*$(this).closest( ".steps" ).css("background-color","red");*/
+if ($(this).closest( ".steps" ).hasClass("foco")) {
+    $(this).closest( ".steps" ).removeClass("foco");
     item++
     $("[orden="+item+"]").css({"display":"block","opacity":"1"});
-    /*$("[orden="+item+"]").removeClass("hide");*/
+    $("[orden="+item+"]").addClass("foco");
     $('html,body').animate({
     scrollTop:$("[orden="+item+"]").offset().top
-    }, '800');
+    }, 'slow');
+}/*end if*/
 });
+/*END LISTENER*/
+
 
 //CAMBIO DE COLORES
 $(".step2").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
