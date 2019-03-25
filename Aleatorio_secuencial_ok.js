@@ -55,10 +55,15 @@ console.log(check);
 
 /*HIDE STEPS*/
 for ( i=2; i<=cantPreguntas; i++) {
-    console.log("estoy adentro de HIDE");
+//CAMBIO DE COLOR
+$(".step"+i).find(".stepText p").css({"border-bottom":"4px solid #ed7131","color":"#ed7131","background-color":"white"});
     $(".step"+i).addClass("hide");
     $(".step"+i).css({"display":"none","opacity":"0","-webkit-transition":"opacity 2s","transition":"opacity 2s"});
 }/*END STEPS*/
+
+
+
+
 
 /*SHOW LOS ITEM EN ORDEN*/
 var item = 1;
@@ -81,19 +86,6 @@ if ($(this).closest( ".steps" ).hasClass("foco")) {
 /*END LISTENER*/
 
 
-//CAMBIO DE COLORES
-$(".step2").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
-$(".step3").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
-$(".step4").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
-$(".step5").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
-$(".step6").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
-$(".step7").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
-$(".step8").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
-$(".step9").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
-$(".step10").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
-$(".step11").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
-$(".step12").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
-$(".step13").find("p:first-child").css({"background-color":"white","color":"#EA3D3D","font-style":"italic"});
 
 
 });//END DOCUMENT READY
